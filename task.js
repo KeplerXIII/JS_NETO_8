@@ -1,8 +1,8 @@
 const adsElements = document.querySelectorAll('.rotator__case')
 
-setInterval(() => {
-    const currentElement = document.querySelector('.rotator__case.rotator__case_active');
 
+function changeAds(adsElements)  {
+    const currentElement = document.querySelector('.rotator__case.rotator__case_active');
     adsElements.forEach(element => {
         element.classList.remove('rotator__case_active');
     });
@@ -14,5 +14,13 @@ setInterval(() => {
     
     nextElement.style.color = nextElement.getAttribute('data-color');
     nextElement.classList.add('rotator__case_active');
+    return document.querySelector('.rotator__case.rotator__case_active').getAttribute('data-speed');
+}
 
-}, 1000);
+function endlessAds () {
+    interval = changeAds(adsElements);
+    setTimeout(endlessAds, interval);
+}
+
+endlessAds();
+
