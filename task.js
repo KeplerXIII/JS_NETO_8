@@ -15,4 +15,4 @@ setInterval(() => {
     nextElement.style.color = nextElement.getAttribute('data-color');
     nextElement.classList.add('rotator__case_active');
 
-}, 100);
+}, 1000);
