@@ -1,5 +1,4 @@
 const adsElements = document.querySelectorAll('.rotator__case')
-let changeTime = 100
 
 setInterval(() => {
     const currentElement = document.querySelector('.rotator__case.rotator__case_active')
